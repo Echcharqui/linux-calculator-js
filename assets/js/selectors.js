@@ -1,3 +1,6 @@
+// Select the history container
+const historyContainer = document.getElementById("history");
+
 // Select all buttons allowed to write into the current expression.
 const activeButtons = document.querySelectorAll(".btn.active");
 
