@@ -3,9 +3,7 @@
 .container {
     width: 400px;
     height: 630px;
-
     background-color: colors.$bg-dark-2;
-
     border-radius: 20px;
 
     & .head {
@@ -23,11 +21,50 @@
         height: 238px;
     }
 
-    & .current-ops {
+    & .ops {
         background-color: #3d3d3d;
         width: 100%;
         height: 72px;
         box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        & #current-ops {
+            width: 100%;
+            padding: 5px 10px;
+
+            & span {
+                font-size: 21px;
+                color: white;
+            }
+        }
+
+        & .error_displayer {
+            display: none;
+            width: 100%;
+            padding: 5px 10px;
+
+            & span {
+                font-size: 16px;
+                font-weight: bold;
+                color: rgb(230, 92, 92) !important;
+            }
+        }
+
+        &.error {
+            & #current-ops {
+                & span {
+                    color: rgb(230, 92, 92) !important;
+                }
+            }
+
+            & .error_displayer {
+                display: block;
+            }
+        }
     }
 
     & .keyboard {

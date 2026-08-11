@@ -13,48 +13,61 @@
     <div class="container">
         <div class="head"></div>
 
-        <div class="history"></div>
+        <div id="history" class="history"></div>
 
-        <div class="current-ops"></div>
+        <!-- error -->
+        <div id="ops_container" class="ops">
+            <div id="current-ops">
+                <span></span>
+            </div>
+            <div class="error_displayer">
+                <span>Malformed expression!</span>
+            </div>
+        </div>
 
         <div class="keyboard">
             <div class="btn-ctn">
                 <!-- Row 1 -->
-                <button class="btn ops">C</button>
-                <button class="btn ops">(</button>
-                <button class="btn ops">)</button>
-                <button class="btn ops">mod</button>
-                <button class="btn ops">π</button>
+                <button id="clear" class="btn ops" data-value="C">C</button>
+                <button class="btn ops" data-value="(">(</button>
+                <button class="btn ops" data-value=")">)</button>
+                <button class="btn ops" data-value="%">mod</button>
+                <button class="btn ops" data-value="π">π</button>
 
                 <!-- Row 2 -->
-                <button class="btn num">7</button>
-                <button class="btn num">8</button>
-                <button class="btn num">9</button>
-                <button class="btn ops">÷</button>
-                <button class="btn ops">√</button>
+                <button class="btn num active" data-value="7">7</button>
+                <button class="btn num active" data-value="8">8</button>
+                <button class="btn num active" data-value="9">9</button>
+                <button class="btn ops active" data-value="/">÷</button>
+                <button class="btn ops" data-value="√">√</button>
 
                 <!-- Row 3 -->
-                <button class="btn num">4</button>
-                <button class="btn num">5</button>
-                <button class="btn num">6</button>
-                <button class="btn ops">×</button>
-                <button class="btn ops">x²</button>
+                <button class="btn num active" data-value="4">4</button>
+                <button class="btn num active" data-value="5">5</button>
+                <button class="btn num active" data-value="6">6</button>
+                <button class="btn ops active" data-value="x">×</button>
+                <button class="btn ops" data-value="²">x²</button>
 
                 <!-- Row 4 -->
-                <button class="btn num">1</button>
-                <button class="btn num">2</button>
-                <button class="btn num">3</button>
-                <button class="btn ops">−</button>
-                <button class="btn equals">=</button>
+                <button class="btn num active" data-value="1">1</button>
+                <button class="btn num active" data-value="2">2</button>
+                <button class="btn num active" data-value="3">3</button>
+                <button class="btn ops active" data-value="-">−</button>
+                <button id="equals" class="btn equals" data-value="=">=</button>
 
                 <!-- Row 5 -->
-                <button class="btn num">0</button>
-                <button class="btn ops">.</button>
-                <button class="btn ops">%</button>
-                <button class="btn ops">+</button>
+                <button class="btn num active" data-value="0">0</button>
+                <button class="btn ops active" data-value=".">.</button>
+                <button class="btn ops active" data-value="%">%</button>
+                <button class="btn ops active" data-value="+">+</button>
             </div>
         </div>
     </div>
+
+    <script src="./assets/js/core.js"></script>
+    <script src="./assets/js/selectors.js"></script>
+    <script src="./assets/js/actions.js"></script>
+    <script src="./assets/js/listeners.js"></script>
 </body>
 
 </html>
