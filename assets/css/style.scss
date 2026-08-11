@@ -1,0 +1,43 @@
+@use "colors";
+@use "container";
+
+/* Universal box-sizing reset for consistent element sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Root html setup */
+html {
+  /* Prevent horizontal scroll issues and enable smooth scrolling */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  /* Modern text rendering optimization */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Base body styles */
+body {
+  /* Remove default browser spacing */
+  margin: 0;
+  padding: 0;
+
+  /* Ensure the body takes up at least the full viewport height */
+  min-height: 100vh;
+
+  /* Modern typography defaults */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  color: colors.$primary;
+  background-color: colors.$bg-light;
+
+  /* Smooth font rendering on macOS/iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
