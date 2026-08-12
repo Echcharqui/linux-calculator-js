@@ -7,6 +7,11 @@ let opsHistory = [];
 // Stores an error and blocks input until the calculator is cleared.
 let calculationError = "";
 
+function toggleDropList(event) {
+    event.stopPropagation();
+    dropList.classList.toggle("active");
+}
+
 // Rebuilds the history HTML using the opsHistory array.
 function updateHistory() {
     // Remove the currently displayed history.
@@ -41,6 +46,11 @@ function updateHistory() {
     });
 
     historyContainer.scrollTop = historyContainer.scrollHeight;
+}
+// clear history.
+function clearHistory(params) {
+    opsHistory = []
+    historyContainer.innerHTML = "";
 }
 
 // Adds the clicked button value to the current expression.
@@ -96,3 +106,4 @@ function clearCurrentOpsField() {
     currentOpsField.textContent = "";
     opsContainer.classList.remove("error");
 }
+

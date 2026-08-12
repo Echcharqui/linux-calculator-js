@@ -13,3 +13,9 @@ const opsContainer = document.getElementById("ops_container");
 // Select the equals and clear buttons.
 const equalButton = document.getElementById("equals");
 const clearBtn = document.getElementById("clear");
+
+// select the button that clear the history
+const clearHitory = document.getElementById("clear_hitory")
+
+const dropList = document.getElementById("drop_list");
+const menuButton = document.getElementById("menu_button");

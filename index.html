@@ -11,7 +11,16 @@
 <body>
 
     <div class="container">
-        <div class="head"></div>
+        <div class="head">
+            <div class="btn" id="menu_button">
+                <i data-lucide="menu" color="#f3f4f6"></i>
+            </div>
+            <div id="drop_list" class="drop_list">
+                <div class="btn" id="clear_hitory">
+                    <span>Clear history</span>
+                </div>
+            </div>
+        </div>
 
         <div id="history" class="history">
         </div>
@@ -69,6 +78,10 @@
     <script src="./assets/js/selectors.js"></script>
     <script src="./assets/js/actions.js"></script>
     <script src="./assets/js/listeners.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
